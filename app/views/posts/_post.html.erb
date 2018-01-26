@@ -3,7 +3,7 @@
     <div class="post-head">
       <div class="thumb-img"></div>
       <div class="user-name">
-        <%= post.user.user_name %>
+        <h2><%= post.user.user_name %><h2>
       </div>
     </div>
     <div class="image center-block">
@@ -12,15 +12,16 @@
     <div class="post-bottom">
       <div class="caption">
         <div class="user-name">
-          <%= post.user.user_name %>
+          <h4><%= post.user.user_name %><h4>
         </div>
         <%= post.caption %>
       </div>
+      <h6><u>Comments</u></h6>
       <% if post.comments %>
         <% post.comments.each do |comment| %>
           <div class="comment">
             <div class="user-name">
-              <%= comment.user.user_name %>
+              <%= comment.user.user_name %></p>
             </div>
             <div class="comment-content">
               <%= comment.content %>
