@@ -1,28 +1,17 @@
-<nav class="navbar navbar-default">
-  <div class="navbar-container">
-    <div class="navbar-header">
-      <div class="navbar-brand">
-        <%= link_to "PicPostApp", root_path %>
+<div class="posts-wrapper row">
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="post-head">
+        <div class="name">
+          Ben Walker
+        </div>
       </div>
+      <div class="image center-block">
+        <%= link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post) %>
+      </div>
+      <p class="caption">
+        <%= post.caption %>
+      </p>
     </div>
-    <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <%= link_to "New Post", new_post_path %>
-        </li>
-        <li>
-          <%= link_to "Login", '#' %>
-        </li>
-        <li>
-          <%= link_to "Register", '#' %>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<h1>PicPostApp</h1>
-<% @posts.each do |post| %>
-<%= image_tag post.image.url(:medium) %>
-<%= post.caption %>
-<% end %>
+  <% end %>
+</div>
