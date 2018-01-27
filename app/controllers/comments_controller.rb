@@ -14,6 +14,16 @@ class CommentsController < ApplicationController
     end
   end
 
+  def update
+    if @comment.update(comment_params)
+      flash[:success] = "Comment updated."
+      redirect_to posts_path
+    else
+      flash.now[:alert] = "Update failed.  Please check the form."
+      render :edit
+    end
+  end
+
   def destroy
     @comment = @post.comments.find(params[:id])
 

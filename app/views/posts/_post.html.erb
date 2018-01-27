@@ -28,7 +28,7 @@
             </div>
             <% if comment.user == current_user %>
               <%= link_to post_comment_path(post, comment), method: :delete, data: { confirm: "Are you sure?" } do %>
-                <span class="glyphicon glyphicon-remove delete-comment"></span>
+                <span class="float-right"><i class="fas fa-trash-alt"></i></span>
               <% end %>
             <% end %>
           </div>
