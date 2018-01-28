@@ -33,7 +33,7 @@
  }
 
  .navbar-container {
-   width: 640px;
+   width: 70%;
    margin: 0 auto;
  }
 
@@ -45,13 +45,17 @@
  }
 
  .post {
-   background-color: #fff;
+   background-color: hsla(53, 5%, 50%, .2);
    border-color: #edeeee;
    border-style: solid;
    border-radius: 3px;
    border-width: 1px;
    margin-bottom: 60px;
+   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
  }
+ .post:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
 
  .post-head {
    height: 64px;
@@ -64,17 +68,95 @@
      display: block;
    }
  }
+ .user-name{
+   font-weight: 500;
+ }
+ .time-ago{
+   color: #A5A7AA;
+   float: right;
+ }
 
  .image {
    border-bottom: 1px solid #eeefef;
    border-top: 1px solid #eeefef;
  }
 
+ .post-bottom {
+  .user-name, .comment-content {
+    display: inline;
+  }
+  .caption {
+    margin-bottom: 7px;
+  }
+  .user-name {
+    font-weight: 500;
+    margin-right: 0.3em;
+    color: #125688;
+    font-size: 15px;
+  }
+  .user-name, .caption-content {
+    display: inline;
+  }
+  .comment{
+    border: 1px solid hsla(205, 77%, 30%, .3);
+    border-radius: 5px;
+    margin-bottom: 2px;
+    padding: 5px;
+    box-sizing: border-box;
+
+  }
+  #comment {
+    margin-top: 7px;
+    .user-name {
+      font-weight: 500;
+      margin-right: 0.3em;
+    }
+    .delete-comment {
+      float: right;
+      color: #515151;
+    }
+  }
+  margin-bottom: 7px;
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+
  .caption {
-   padding: 24px 24px;
+   padding: 24px 24px 24px 0;
    font-size: 15px;
    line-height: 18px;
 
+ }
+ .comment_content {
+   font-size: 15px;
+   line-height: 18px;
+   border: medium none;
+   width: 100%;
+   color: #4B4F54;
+ }
+ #comment_content{
+   width: 100%;
+   margin: 0 auto;
+   border-radius: 5px;
+ }
+ img{
+   width: 100%;
+ }
+ .comment-like-form {
+   padding-top: 24px;
+   margin-top: 13px;
+   margin-left: 24px;
+   margin-right: 24px;
+   min-height: 68px;
+   align-items: center;
+   border-top: 1px solid #EEEFEF;
+   flex-direction: row;
+   justify-content: center;
  }
 
  .form-wrapper {
@@ -89,4 +171,8 @@
  .edit-links {
    margin-top: 20px;
    margin-bottom: 40px;
+ }
+ .delete{
+   margin-left: auto;
+   margin-right: 0;
  }
